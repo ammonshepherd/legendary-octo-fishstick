@@ -11,5 +11,8 @@ paint_coverage = 350 # one gallon of paint covers 350 square feet
 
 paint_needed = wall_area / paint_coverage
 
+cans_needed = ceil(paint_needed)
+
 print(f"Wall area: {wall_area:.1f} sq ft")
 print(f"Paint needed: {paint_needed:.3f} gallons")
+print(f"Cans needed: {cans_needed} can(s)")
