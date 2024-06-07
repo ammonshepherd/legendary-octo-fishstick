@@ -52,11 +52,23 @@ if (status == 'UG') or (status == 'G') or (status == "DL"):
         final_total = ((final / FINAL_MAX) * 100) * 0.50
         grade_average = homework_total + quiz_total + midterm_total + final_total
 
+    if grade_average >= 90.0:
+        grade = "A"
+    elif 80.0 <= grade_average < 90.0:
+        grade = "B"
+    elif 70.0 <= grade_average < 80.0:
+        grade = "C"
+    elif 60.0 <= grade_average < 70.0:
+        grade = "D"
+    else:
+        grade = "F"
+
     # print out results
     print(f"Homework: {homework_average:2.1f}%")
     print(f"Quizzes: {quiz_average:.1f}%")
     print(f"Midterm: {midterm_average:.1f}%")
     print(f"Final: {final_average:.1f}%")
     print(f"{status} average: {grade_average:.1f}%")
+    print("Course grade:", grade)
 else:
     print("Error: student status must be UG, G or DL")
