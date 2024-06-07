@@ -57,6 +57,6 @@ if (status == 'UG') or (status == 'G') or (status == "DL"):
     print(f"Quizzes: {quiz_average:.1f}%")
     print(f"Midterm: {midterm_average:.1f}%")
     print(f"Final: {final_average:.1f}%")
-    print(f"G average: {grade_average:.1f}%")
+    print(f"{status} average: {grade_average:.1f}%")
 else:
     print("Error: student status must be UG, G or DL")
