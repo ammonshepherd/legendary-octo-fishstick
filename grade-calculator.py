@@ -21,6 +21,16 @@ if (status == 'UG') or (status == 'G') or (status == "DL"):
     midterm_average = (midterm / MIDTERM_MAX) * 100
     final_average = (final / FINAL_MAX) * 100
 
+    # if any average is above 100% set it to 100%
+    if homework_average > 100:
+        homework_average = 100
+    if quiz_average > 100:
+        quiz_average = 100
+    if midterm_average > 100:
+        midterm_average = 100
+    if final_average > 100:
+        final_average = 100
+
     # print out results
     print(f"Homework: {homework_average:2.1f}%")
     print(f"Quizzes: {quiz_average:.1f}%")
