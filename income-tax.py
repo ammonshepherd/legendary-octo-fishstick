@@ -40,15 +40,24 @@ else:
     else:
         if taxable_income <= 20000:
             tax = taxable_income * 0.10
-        elif 200001 <= taxable_income <= 80000:
+        elif 20001 <= taxable_income <= 80000:
             tax = 2000 + ((taxable_income - 20000) * 0.12)
         else:
             tax = 9200 + ((taxable_income - 80000) * 0.22)
 
     tax = round(tax) # round the tax to get rid of cents
+
+    due = tax - taxes_withheld
+    
+    if due < 0:
+        due = -due
+        taxes = f"Tax due: ${due:,}"
+    else:
+        taxes = f"Tax refund: ${due:,}"
     
     print(f"AGI: ${agi:,}")
     print(f"Deduction: ${deduction:,}")
     print(f"Taxable income: ${taxable_income:,}")
     print(f"Federal Tax: ${tax:,}")
+    print(taxes)
 
