@@ -17,8 +17,11 @@ pizza_cost = one_pizza_cost * pizzas_needed
 sales_tax = pizza_cost * 0.07
 delivery_charge = (pizza_cost + sales_tax) * 0.2
 
+total = pizza_cost + sales_tax + delivery_charge
+
 print()
 print("Friday Night Party")
 print(f"{pizzas_needed} Pizzas: ${pizza_cost:.2f}")
 print(f"Tax: ${sales_tax:.2f}")
 print(f"Delivery: ${delivery_charge:.2f}")
+print(f"Total: ${total:.2f}")
