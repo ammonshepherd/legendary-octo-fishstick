@@ -34,10 +34,10 @@ if (status == 'UG') or (status == 'G') or (status == "DL"):
     # calculate course average based on student status
     TOTAL_POINTS = HOMEWORK_MAX + QUIZZES_MAX + MIDTERM_MAX + FINAL_MAX
     if status == 'UG':
-        homework_total = (homework / HOMEWORK_MAX) * 0.20
-        quiz_total = (quiz / QUIZZES_MAX) * 0.20
-        midterm_total = (midterm / MIDTERM_MAX) * 0.30
-        final_total = (final / FINAL_MAX) * 0.30
+        homework_total = ((homework / HOMEWORK_MAX) * 100) * 0.20
+        quiz_total = ((quiz / QUIZZES_MAX) * 100) * 0.20
+        midterm_total = ((midterm / MIDTERM_MAX) * 100) * 0.30
+        final_total = ((final / FINAL_MAX) * 100) * 0.30
         grade_average = homework_total + quiz_total + midterm_total + final_total
     elif status == 'G':
         homework_total = ((homework / HOMEWORK_MAX) * 100) * 0.15
@@ -46,10 +46,10 @@ if (status == 'UG') or (status == 'G') or (status == "DL"):
         final_total = ((final / FINAL_MAX) * 100) * 0.45
         grade_average = homework_total + quiz_total + midterm_total + final_total
     elif status == 'DL':
-        homework_total = (homework / HOMEWORK_MAX) * 0.05
-        quiz_total = (quiz / QUIZZES_MAX) * 0.05
-        midterm_total = (midterm / MIDTERM_MAX) * 0.40
-        final_total = (final / FINAL_MAX) * 0.50
+        homework_total = ((homework / HOMEWORK_MAX) * 100) * 0.05
+        quiz_total = ((quiz / QUIZZES_MAX) * 100) * 0.05
+        midterm_total = ((midterm / MIDTERM_MAX) * 100) * 0.40
+        final_total = ((final / FINAL_MAX) * 100) * 0.50
         grade_average = homework_total + quiz_total + midterm_total + final_total
 
     # print out results
