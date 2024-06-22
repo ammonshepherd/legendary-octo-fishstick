@@ -2,10 +2,6 @@
 Program Specifications
 Write a program to calculate the minimum, maximum, mean, median, mode, and whether a list is a palindrome.
 Your program should contain the following tasks:
-
-# Step 2: Calculate mean as the sum of all values divided by the number of values
-    .
-
 # Step 3: Check if palindrome, meaning values are the same from front to back and back to front.
 # the output should be "true" or "false".
 
@@ -38,3 +34,12 @@ for n in range(len(num_list)):
 print(num_list)
 print(f'min: {min}')
 print(f'max: {max}')
+
+# Step 2: Calculate mean as the sum of all values divided by the number of values
+sum = 0
+for i in num_list:
+    sum += i
+
+mean = sum / len(num_list)
+
+print(f'mean: {mean:.3f}')
