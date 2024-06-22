@@ -2,11 +2,6 @@
 Program Specifications
 Write a program to calculate the minimum, maximum, mean, median, mode, and whether a list is a palindrome.
 Your program should contain the following tasks:
-# Step 3: Check if palindrome, meaning values are the same from front to back and back to front.
-# the output should be "true" or "false".
-
-# Step 4: sort the values in ascending order.
-# After sorting the list, find the median, which is the value located in the middle of the list if the list has an odd number of values or the average of the middle two values, if the list has an even number of values
 
 # Step 5: Identify the mode of the list, after you sorted in ascending order.
 # The mode is the value that appears most frequently. Assume that only one mode exists.
@@ -29,7 +24,7 @@ for n in range(len(num_list)):
         min = num_list[n]
     elif num_list[n] < min:
         min = num_list[n]
-        
+
 
 print(num_list)
 print(f'min: {min}')
@@ -43,3 +38,12 @@ for i in num_list:
 mean = sum / len(num_list)
 
 print(f'mean: {mean:.3f}')
+
+# Step 3: Check if palindrome, meaning values are the same from front to back and back to front. The output should be "true" or "false".
+
+reverse_list = num_list[::-1]
+print("Is palindrome?: ", end="")
+if num_list == reverse_list:
+    print("true")
+else:
+    print("false")
