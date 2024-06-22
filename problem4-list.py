@@ -47,3 +47,26 @@ if num_list == reverse_list:
     print("true")
 else:
     print("false")
+
+# Step 4: sort the values in ascending order.
+# After sorting the list, find the median, which is the value located in the middle of the list if the list has an odd number of values or the average of the middle two values, if the list has an even number of values
+
+# Copy the list
+sorted_list = num_list[:]
+# Sort the new list
+sorted_list.sort()
+print(f'List sorted: {sorted_list}')
+print('median: ', end="")
+
+# if the length is even
+if len(sorted_list) % 2 == 0:
+    # get the left middle number
+    left_mid = sorted_list[len(sorted_list)//2]
+    # get the right middle number
+    right_mid = sorted_list[(len(sorted_list)//2) + 1]
+    median = (left_mid + right_mid) / 2
+    # output the median
+    print(f'{median:.2f}')
+else:
+    # otherwise print out the middle number
+    print(sorted_list[len(sorted_list)//2])
