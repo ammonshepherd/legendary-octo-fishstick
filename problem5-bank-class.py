@@ -55,3 +55,33 @@ class BankAccount:
         if(amount > 0):
             self.checking_balance -= amount
             self.savings_balance += amount 
+
+if __name__ == "__main__":
+    print("Creating account for Joe Doe with $1000.00 in checking and $2000.00 in savings.")
+    joe_doe = BankAccount('Joe Doe', checking_balance=1000.00, savings_balance=2000.00)
+
+    print()
+    print(f'Account Information for {joe_doe.customer_name}')
+    print(f'Checking Account: ${joe_doe.checking_balance:.2f}')
+    print(f'Savings Account: ${joe_doe.savings_balance:.2f}')
+
+    print()
+    check_withdraw = int(input("Enter amount to withdraw from checking: $"))
+    if (check_withdraw > joe_doe.checking_balance):
+        print("Warning: The amount you are withdrawing is greater than your balance!")
+    joe_doe.withdraw_checking(check_withdraw)
+
+    print()
+    sav_withdraw = int(input("Enter amount to withdraw from savings: $"))
+    if (sav_withdraw > joe_doe.savings_balance):
+        print("Warning: The amount you are withdrawing is greater than your balance!")
+    joe_doe.withdraw_savings(sav_withdraw)
+
+    print()
+    print("Transfer $42 from checking to savings.")
+    joe_doe.transfer_to_savings(42)
+     
+    print()
+    print(f'Account Information for {joe_doe.customer_name}')
+    print(f'Checking Account: ${joe_doe.checking_balance:.2f}')
+    print(f'Savings Account: ${joe_doe.savings_balance:.2f}')
