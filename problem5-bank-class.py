@@ -46,3 +46,7 @@ class BankAccount:
     def withdraw_checking(self, amount):
         if(amount > 0):
             self.checking_balance -= amount
+    
+    def withdraw_savings(self, amount):
+        if(amount > 0):
+            self.savings_balance -= amount  
