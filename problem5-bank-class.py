@@ -50,3 +50,8 @@ class BankAccount:
     def withdraw_savings(self, amount):
         if(amount > 0):
             self.savings_balance -= amount  
+    
+    def transfer_to_savings(self, amount):
+        if(amount > 0):
+            self.checking_balance -= amount
+            self.savings_balance += amount 
