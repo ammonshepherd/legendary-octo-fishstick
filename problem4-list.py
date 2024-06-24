@@ -2,11 +2,7 @@
 Program Specifications
 Write a program to calculate the minimum, maximum, mean, median, mode, and whether a list is a palindrome.
 Your program should contain the following tasks:
-
-# Step 5: Identify the mode of the list, after you sorted in ascending order.
-# The mode is the value that appears most frequently. Assume that only one mode exists.
-    # Hint: Use a loop to process each list element, looking for the longest sequence of identical values.
-# '''
+'''
 # get list of numbers from input as strings
 num_list = input().split()
 # convert all the numbers to integers
@@ -70,3 +66,31 @@ if len(sorted_list) % 2 == 0:
 else:
     # otherwise print out the middle number
     print(sorted_list[len(sorted_list)//2])
+
+# Step 5: Identify the mode of the list, after you sorted in ascending order.
+# The mode is the value that appears most frequently. Assume that only one mode exists.
+    # Hint: Use a loop to process each list element, looking for the longest sequence of identical values.
+
+mode_dict = {}
+# loop through sorted array
+for n in sorted_list:
+    # check if value is in dictionary as a key
+    if n in mode_dict:
+        val = mode_dict[n]
+        mode_dict[n] = val + 1
+        # increase value by one
+    # if not in dictionary
+    else:
+        # add to dictionary and set value to one
+        mode_dict.update({n: 1})
+
+# print out the key that has the highest value
+max_element = 0
+max_times = 0
+# loop through the dict, assign key to e (for element in the sorted list)
+# and assign value to t (times the element is in the sorted list)
+for e, t in mode_dict.items():
+    if t > max_times:
+        max_element = e
+        max_times = t
+print(f"mode: {max_element}, {max_times} times")
