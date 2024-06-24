@@ -34,3 +34,7 @@ class BankAccount:
         self.customer_name = new_name
         self.checking_balance = checking_balance
         self.savings_balance = savings_balance
+    
+    def deposit_checking(self, amount):
+        if(amount > 0):
+            self.checking_balance += amount
