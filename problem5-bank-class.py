@@ -26,4 +26,6 @@ Create a testing program in which:
 * Print balance for both accounts at the end of the program.
 '''
 class BankAccount:
-    
+    customer_name = ''
+    savings_balance = 0
+    checking_balance = 0
