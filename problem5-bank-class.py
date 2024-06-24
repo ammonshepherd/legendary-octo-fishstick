@@ -29,3 +29,8 @@ class BankAccount:
     customer_name = ''
     savings_balance = 0
     checking_balance = 0
+
+    def __init__(self, new_name, checking_balance, savings_balance):
+        self.customer_name = new_name
+        self.checking_balance = checking_balance
+        self.savings_balance = savings_balance
